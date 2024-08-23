@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/image/netflix.icon.webp" type="image/icon type">
+</head>
+
+<body onload="document.form.text1.focus()">
+    <div class="wapper">
+        <div class="header">
+            <div class="image">
+                <h2>NETFLIX</h2>
+                <div class="main">
+                    <div class="heading">
+                        <h2>Sign In</h2>
+                    </div>
+                    <form name="form" action="#">
+                        <label for=""></label>
+                        <input type="text" id="email" name="text1" placeholder="Email or mobile number">
+                        <input type="password" id="password" value="">
+                        <span id="message" style="color:red"> </span> <br><br>
+                        <a class="button-form" href="#Sign In" onclick="ValidateEmail(document.form.text1)">Sign In</a>
+                    </form>
+                    <div class="OR">
+                        <p>OR</p>
+                    </div>
+                    <div class="button-sign-in">
+                        <a href="sign.html">Use a Sign-In Code</a>
+                    </div>
+                    <div class="button-forgot">
+                        <a href="forgot.html">Forgot Password?</a>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Remember me">
+                        <label for="Remember me">Remember me</label><br>
+                    </div>
+                    <div class="main-text">
+                        <div class="text">
+                            <p>New to Netflix?</p>
+                        </div>
+                        <div class="button-text">
+                            <a href="index.html">Sign up now</a>
+                        </div>
+                    </div>
+                    <div class="last-text">
+                        <p>This page is protected by Google reCAPTCHA to ensure you're not a bot.
+                            <a href="#Learn more.">Learn more.</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="head">
+                <div class="signin-block">
+                    <div class="container">
+                        <div class="main-block">
+                            <div class="had-block">
+                                <a href="#Questions? Contact us.">Questions? Contact us.</a>
+                                <div class="button-block-seven">
+                                    <a href="FAQ">FAQ</a>
+                                </div>
+                                <div class="button-block">
+                                    <a href="#Cookie Preferences">Cookie Preferences</a>
+                                </div>
+                                <div class="button-block-ten">
+                                    <select id="English">
+                                        <optio>English</option>
+                                            <option>English</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="button-block">
+                                <a href="#Help Center">Help Center</a>
+                                <div class="button-block">
+                                    <a href="#Corporate Information">Corporate Information</a>
+                                </div>
+                            </div>
+                            <div class="button-block">
+                                <a href="#Terms of Use">Terms of Use</a>
+                            </div>
+                            <div class="button-block">
+                                <a href="#Privacy">Privacy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            // function verifyPassword() {
+            //     var password = document.getElementById("password").value;
+            //     //check empty password field  
+            //     if (password == "") {
+            //         document.getElementById("message").innerHTML = "**Fill the password please!";
+            //         return false;
+            //     }
+            // }
+            // //minimum password length validation  
+            // if (password.length < 8) {
+            //     document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";
+            //     return false;
+            // }
+            function ValidateEmail(input) {
+
+                var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+                if (input.value.match(validRegex)) {
+
+                    alert("Valid email address!");
+
+                    document.form1.text1.focus();
+
+                    return true;
+
+                } else {
+
+                    alert("Invalid email address!");
+
+                    document.form1.text1.focus();
+
+                    return false;
+
+                }
+
+            }
+
+        </script>
+</body>
+
+</html>
